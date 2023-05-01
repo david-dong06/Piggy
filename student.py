@@ -17,8 +17,8 @@ class Piggy(PiggyParent):
         ''' 
         MAGIC NUMBERS <-- where we hard-code our settings
         '''
-        self.LEFT_DEFAULT = 80
-        self.RIGHT_DEFAULT = 80
+        self.LEFT_DEFULT = 80
+        self.RIGHT_DEFULT = 80
         self.MIDPOINT = 1500  # what servo command (1000-2000) is straight forward for your bot?
         self.set_motor_power(self.MOTOR_LEFT + self.MOTOR_RIGHT, 0)
         self.load_defaults()
@@ -59,11 +59,23 @@ class Piggy(PiggyParent):
 
     def david(self):
       print("this is for testing")
+      self.deg_fwd(360)
+      self.turn_by_deg(90)
+      self.deg_fwd(360)
+      self.turn_by_deg(90)
+      self.deg_fwd(360)
+      self.turn_by_deg(90)
+      self.deg_fwd(360)
+      self.turn_by_deg(90)
+      
   
     def dance(self):
+     
+      
         """A higher-ordered algorithm to make your robot dance"""
         # TODO: check to see if it's safe before dancing
         
+      
         # lower-ordered example...
         self.right(primary=50, counter=50)
         time.sleep(2)
