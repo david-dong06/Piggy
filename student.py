@@ -72,8 +72,8 @@ class Piggy(PiggyParent):
     def safe_to_dance(self):
       
         for x in range(10):
-          self.read_distance()
-          self.right(36)
+          
+          self.turn_by_deg(36)
           if self.read_distance()<=100:
             return False
         return True
