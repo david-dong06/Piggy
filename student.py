@@ -60,14 +60,11 @@ class Piggy(PiggyParent):
 
     def david(self):
       print("this is for testing")
-      self.deg_fwd(360)
-      self.turn_by_deg(90)
-      self.deg_fwd(360)
-      self.turn_by_deg(90)
-      self.deg_fwd(360)
-      self.turn_by_deg(90)
-      self.deg_fwd(360)
-      self.turn_by_deg(90)
+      for side in range(4):
+        self.fwd()
+        time.sleep(1)
+        self.turn_by_deg(90)
+    
       
       
     def safe_to_dance(self):
