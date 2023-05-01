@@ -68,22 +68,26 @@ class Piggy(PiggyParent):
       self.deg_fwd(360)
       self.turn_by_deg(90)
       
-  
-    def dance(self):
-     
-      
-        """A higher-ordered algorithm to make your robot dance"""
-        # TODO: check to see if it's safe before dancing
-        
-      
-        # lower-ordered example...
-        self.right(primary=50, counter=50)
-        time.sleep(2)
-        self.stop()
-
     def safe_to_dance(self):
-        """ Does a 360 distance check and returns true if safe """
-        pass
+      
+        for x in range(10):
+          self.read_distance()
+          self.right(36)
+          if self.read_distance()<=100:
+            safe_to_dance == false
+            
+    def dance(self):
+      if safe_to_dance == false:
+        self.stop()
+      elif:
+        self.right()
+        self.left()
+        self.right()
+        self.left()
+        self.deg_fwd(360)
+        self.back()
+        self.stop()
+     
 
     def shake(self):
         """ Another example move """
