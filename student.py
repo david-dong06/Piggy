@@ -61,8 +61,8 @@ class Piggy(PiggyParent):
     def david(self):
       print("this is for testing")
       self.deg_fwd(360)
-      '''self.turn_by_deg(90)
-      self.deg_fwd(360)
+      self.turn_by_deg(90)
+      '''self.deg_fwd(360)
       self.turn_by_deg(90)
       self.deg_fwd(360)
       self.turn_by_deg(90)
