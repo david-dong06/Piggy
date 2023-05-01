@@ -74,18 +74,24 @@ class Piggy(PiggyParent):
           self.read_distance()
           self.right(36)
           if self.read_distance()<=100:
-            safe_to_dance == false
+            return False
+        return True
             
     def dance(self):
-      if safe_to_dance == false:
+      if self.safe_to_dance() == False:
         self.stop()
-      elif:
+      else:
         self.right()
+        time.sleep(2)
         self.left()
+        time.sleep(2)
         self.right()
+        time.sleep(3)
         self.left()
+        time.sleep(3)
         self.deg_fwd(360)
         self.back()
+        time.sleep(2)
         self.stop()
      
 
