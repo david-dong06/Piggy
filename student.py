@@ -69,10 +69,12 @@ class Piggy(PiggyParent):
       time.sleep(2)
 
     def right(self):
-      self.turn_by_deg(45)
+      self.right()
+      time.sleep(1)
 
     def left(self):
-      self.turn_by_deg(-45)
+      self.left()
+      time.sleep(1)
 
   
 
