@@ -42,7 +42,10 @@ class Piggy(PiggyParent):
                 "c": ("Calibrate", self.calibrate),
                 "q": ("Quit", self.quit),
                 "z": ("David", self.david)
-                
+                "j": ("left", self.left)
+                "l": ("right", self.right)
+                "i": ("fwd", self.fwd)
+                "k": ("back", self.back)
                 }
         # loop and print the menu...
         for key in sorted(menu.keys()):
@@ -57,6 +60,21 @@ class Piggy(PiggyParent):
     STUDENT PROJECTS
     ****************
     '''
+    def fwd(self):
+      self.fwd()
+      time.sleep(2)
+
+    def back(self):
+      self.back()
+      time.sleep(2)
+
+    def right(self):
+      self.turn_by_deg(45)
+
+    def left(self):
+      self.turn_by_deg(-45)
+
+  
 
     def david(self):
       print("this is for testing")
