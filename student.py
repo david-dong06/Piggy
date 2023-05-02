@@ -42,7 +42,7 @@ class Piggy(PiggyParent):
                 "c": ("Calibrate", self.calibrate),
                 "q": ("Quit", self.quit),
                 "z": ("David", self.david),
-                "v": ("Servo", self.servo),
+                "v": ("move_servo", self.servo),
                 
                 }
         # loop and print the menu...
@@ -58,9 +58,23 @@ class Piggy(PiggyParent):
     STUDENT PROJECTS
     ****************
     '''
-    def servo(self):
+    def move_servo(self):
       self.servo(1000)
-
+    '''
+    def avoid(self):
+      self.servo(1500)
+      self.turn_to_deg(0)
+      if self.read_distance()<=100:
+        return False
+      return True
+      if True:
+        for side in range(10):
+          self.deg_fwd(1080)
+      if False:
+        self.turn_to_deg(90)
+        self.servo(1000)
+      if self.read_distance()<=200
+    '''
 
     def david(self):
       print("this is for testing")
