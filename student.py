@@ -61,8 +61,8 @@ class Piggy(PiggyParent):
     ****************
     '''
     def fwd(self):
-      self.fwd()
-      time.sleep(2)
+      self.deg_fwd(360)
+      
 
     def back(self):
       self.back()
