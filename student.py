@@ -42,6 +42,7 @@ class Piggy(PiggyParent):
                 "c": ("Calibrate", self.calibrate),
                 "q": ("Quit", self.quit),
                 "z": ("David", self.david),
+                "v": ("Servo", self.servo),
                 
                 }
         # loop and print the menu...
@@ -57,6 +58,8 @@ class Piggy(PiggyParent):
     STUDENT PROJECTS
     ****************
     '''
+    def servo(self):
+      self.servo(1000)
 
 
     def david(self):
