@@ -43,7 +43,7 @@ class Piggy(PiggyParent):
                 "q": ("Quit", self.quit),
                 "z": ("David", self.david),
                 "v": ("move_servo", self.servo),
-                
+                "e": ("move_dodge", self.dodge),
                 }
         # loop and print the menu...
         for key in sorted(menu.keys()):
@@ -76,6 +76,22 @@ class Piggy(PiggyParent):
       if self.read_distance()<=200
     '''
 
+    def dodge(self):
+      if self.read_distance()<=100:
+        return False
+      return True
+      while True:
+        self.deg_fwd(360)
+        if False:
+          self.turn_by_deg(90)
+          self.deg_fwd(360)
+          self.turn_by_deg(-90)
+          if False:
+            self.turn_by_deg(90)
+            self.deg_fwd(360)
+            self.deg_fwd(-90)
+        
+  
     def david(self):
       print("this is for testing")
       for side in range(4):
