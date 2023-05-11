@@ -76,13 +76,15 @@ class Piggy(PiggyParent):
       if self.read_distance()<=200
     '''
 
-    def dodge(self):
+    def searech(self):
       if self.read_distance()<=100:
         return False
       return True
-      while True:
+
+    def dodge(self)
+      if searech() == True:
         self.deg_fwd(360)
-      while False:
+      if searech() == False:
         self.turn_by_deg(90)
         self.deg_fwd(360)
         self.turn_by_deg(-90)
