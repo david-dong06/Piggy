@@ -82,14 +82,11 @@ class Piggy(PiggyParent):
       return True
       while True:
         self.deg_fwd(360)
-        if False:
-          self.turn_by_deg(90)
-          self.deg_fwd(360)
-          self.turn_by_deg(-90)
-          if False:
-            self.turn_by_deg(90)
-            self.deg_fwd(360)
-            self.deg_fwd(-90)
+      while False:
+        self.turn_by_deg(90)
+        self.deg_fwd(360)
+        self.turn_by_deg(-90)
+          
         
   
     def david(self):
