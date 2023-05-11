@@ -82,9 +82,9 @@ class Piggy(PiggyParent):
       return True
 
     def dodge(self):
-      if searech() == True:
+      if self.searech() == True:
         self.deg_fwd(360)
-      if searech() == False:
+      else:
         self.turn_by_deg(90)
         self.deg_fwd(360)
         self.turn_by_deg(-90)
