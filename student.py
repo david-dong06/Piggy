@@ -91,7 +91,7 @@ class Piggy(PiggyParent):
             self.turn_by_deg(-180)
             self.stop()
         else:
-          deg_fwd(90)
+          self.deg_fwd(90)
         
   
   
