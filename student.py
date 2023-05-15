@@ -94,7 +94,7 @@ class Piggy(PiggyParent):
         else:
           self.deg_fwd(360)
         
-    def dodge(self):
+    '''def dodge(self):
       while True:
         if self.detect() is True:
           self.deg_fwd(360)
@@ -104,7 +104,7 @@ class Piggy(PiggyParent):
           self.deg_fwd(360)
           self.stop()
           self.turn_by_deg(175)
-          self.stop()
+          self.stop()'''
          
     '''def stop(self):
       while True:
