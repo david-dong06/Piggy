@@ -44,6 +44,7 @@ class Piggy(PiggyParent):
                 "z": ("David", self.david),
                 "v": ("move_servo", self.servo),
                 "e": ("Dodge", self.dodge)
+                "m": ("Maze", self.maze)
                 }
         # loop and print the menu...
         for key in sorted(menu.keys()):
@@ -75,7 +76,24 @@ class Piggy(PiggyParent):
         self.servo(1000)
       if self.read_distance()<=200
     '''
+    def detect(self):
+      if self.read_distance()<=100:
+        return False
+      return True 
 
+    def maze(self):
+      while True:
+        if self.detect() is False:
+          self.stop()
+          self.turn_by_deg(90)
+          if self.detect() is False:
+            self.turn_by_deg(-180)
+            self.stop()
+        else:
+          deg_fwd(90)
+        
+  
+  
     def searech(self):
       if self.read_distance()<=100:
         return False
