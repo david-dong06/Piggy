@@ -43,8 +43,9 @@ class Piggy(PiggyParent):
                 "q": ("Quit", self.quit),
                 "z": ("David", self.david),
                 "v": ("move_servo", self.servo),
-                "e": ("Dodge", self.dodge)
-                "m": ("Maze", self.maze)
+                "m": ("Maze", self.maze),
+                "e": ("Dodge", self.dodge),
+                
                 }
         # loop and print the menu...
         for key in sorted(menu.keys()):
