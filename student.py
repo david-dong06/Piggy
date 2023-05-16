@@ -45,7 +45,7 @@ class Piggy(PiggyParent):
                 "v": ("move_servo", self.servo),
                 "m": ("Maze", self.maze),
                 "e": ("Dodge", self.dodge),
-                "p": ("Stop", self.stop)
+                "p": ("stop", self.pots)
                 }
         # loop and print the menu...
         for key in sorted(menu.keys()):
@@ -105,7 +105,7 @@ class Piggy(PiggyParent):
           self.turn_by_deg(175)
           self.stop()
          
-    def stop(self):
+    def pots(self):
       while True:
         if self.detect() is True:
           self.deg_fwd(360)
