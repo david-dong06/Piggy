@@ -85,9 +85,11 @@ class Piggy(PiggyParent):
           self.deg_fwd(360)
         if self.detect() is False:
           self.turn_by_deg(86)
-          self.deg_fwd(720)
+          self.fwd()
+          time.sleep(3)
           self.turn_by_deg(-86)
-          self.deg_by_deg(1080)
+          self.fwd()
+          time.sleep(5)
                       
         
       
