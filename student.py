@@ -45,7 +45,8 @@ class Piggy(PiggyParent):
                 "v": ("move_servo", self.servo),
                 "m": ("Maze", self.maze),
                 "e": ("Dodge", self.dodge),
-                "p": ("stop", self.pots)
+                "p": ("stop", self.pots),
+                "a": ("Avoid", self.avoid)
                 }
         # loop and print the menu...
         for key in sorted(menu.keys()):
@@ -77,6 +78,21 @@ class Piggy(PiggyParent):
         self.servo(1000)
       if self.read_distance()<=200
     '''
+
+    def avoid(self):
+      while True:
+        self.deg_fwd(360)
+      if self.detect() is false:
+        self.turn_by_deg(86)
+        self.stop()
+        self.deg_fwd(720)
+        self.stop()
+        self.turn_by_deg(-86)
+        self.stop()
+        self.deg_by_deg(1080)
+                    
+        
+      
     def detect(self):
       if self.read_distance()<=100:
         return False
