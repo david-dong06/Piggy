@@ -63,21 +63,23 @@ class Piggy(PiggyParent):
     '''
     def move_servo(self):
       self.servo(1000)
-    '''
-    def avoid(self):
-      self.servo(1500)
-      self.turn_to_deg(0)
-      if self.read_distance()<=100:
-        return False
-      return True
-      if True:
-        for side in range(10):
-          self.deg_fwd(1080)
-      if False:
-        self.turn_to_deg(90)
-        self.servo(1000)
-      if self.read_distance()<=200
-    '''
+    
+    def short(self):
+      while True:
+        if self.detect() == True:
+          self.deg_fwd(360)
+        if self.read_distnace() <= 200:
+          self.stop()
+          self.servo(1000)
+          if self.read_distance() <= 100:
+            self.turn_by_deg(-88)
+            self.deg_fwd(180)
+            self.turn_by_deg(88)
+          self.servo(2000)  
+          if self.read_distance() <= 100:
+            self.turn_by_deg(88)
+            self.deg_fwd(180)
+            self.turn_by_deg(-88)
 
     def avoid(self):
       while True:
