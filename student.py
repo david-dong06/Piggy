@@ -81,16 +81,17 @@ class Piggy(PiggyParent):
 
     def avoid(self):
       while True:
-        self.deg_fwd(360)
-      if self.detect() is false:
-        self.turn_by_deg(86)
-        self.stop()
-        self.deg_fwd(720)
-        self.stop()
-        self.turn_by_deg(-86)
-        self.stop()
-        self.deg_by_deg(1080)
-                    
+        if self.detect() is True:
+          self.deg_fwd(360)
+        if self.detect() is false:
+          self.turn_by_deg(86)
+          self.stop()
+          self.deg_fwd(720)
+          self.stop()
+          self.turn_by_deg(-86)
+          self.stop()
+          self.deg_by_deg(1080)
+                      
         
       
     def detect(self):
