@@ -82,15 +82,15 @@ class Piggy(PiggyParent):
           if left >= right:
             self.turn_by_deg(-68)
             self.stop()
-            self.deg_fwd(180)
-            self.stop()
+            self.fwd()
+            time.sleep(2)
             self.turn_by_deg(68) 
             self.stop()
           else:
             self.turn_by_deg(68)
             self.stop()
-            self.deg_fwd(180)
-            self.stop()
+            self.fwd()
+            time.sleep(2)
             self.turn_by_deg(-68)
             self.stop()
 
