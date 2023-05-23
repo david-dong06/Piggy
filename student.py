@@ -42,12 +42,14 @@ class Piggy(PiggyParent):
                 "c": ("Calibrate", self.calibrate),
                 "q": ("Quit", self.quit),
                 "z": ("David", self.david),
-                "v": ("move_servo", self.servo),
+                "v": ("Servo", self.servo),
                 "m": ("Maze", self.maze),
                 "e": ("Dodge", self.dodge),
                 "p": ("stop", self.pots),
-                "a": ("Avoid", self.avoid)
-                }
+                "a": ("Avoid", self.avoid),
+                "h": ("Short", self.short)
+                
+               }
         # loop and print the menu...
         for key in sorted(menu.keys()):
             print(key + ":" + menu[key][0])
@@ -61,7 +63,7 @@ class Piggy(PiggyParent):
     STUDENT PROJECTS
     ****************
     '''
-    def move_servo(self):
+    def servo(self):
       self.servo(1000)
     
     def short(self):
