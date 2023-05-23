@@ -42,7 +42,7 @@ class Piggy(PiggyParent):
                 "c": ("Calibrate", self.calibrate),
                 "q": ("Quit", self.quit),
                 "z": ("David", self.david),
-                "v": ("Vo", self.servo),
+                "v": ("Vo", self.vo),
                 "m": ("Maze", self.maze),
                 "e": ("Dodge", self.dodge),
                 "p": ("stop", self.pots),
