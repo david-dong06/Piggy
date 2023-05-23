@@ -81,12 +81,18 @@ class Piggy(PiggyParent):
           left = self.read_distance()
           if left >= right:
             self.turn_by_deg(-68)
+            self.stop()
             self.deg_fwd(180)
+            self.stop()
             self.turn_by_deg(68) 
+            self.stop()
           else:
             self.turn_by_deg(68)
+            self.stop()
             self.deg_fwd(180)
+            self.stop()
             self.turn_by_deg(-68)
+            self.stop()
 
     def avoid(self):
       while True:
