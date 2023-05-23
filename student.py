@@ -68,9 +68,9 @@ class Piggy(PiggyParent):
     
     def short(self):
       while True:
-        if self.detect() == True:
+        if self.detect():
           self.deg_fwd(360)
-        if self.read_distnace() is False:
+        else:
           self.stop()
           self.servo(1000)
           if self.read_distance() <= 200:
