@@ -145,7 +145,7 @@ class Piggy(PiggyParent):
         
       
     def detect(self):
-      if self.read_distance()<=200:
+      if self.read_distance()<=100:
         return False
       return True 
 
