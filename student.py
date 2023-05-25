@@ -72,11 +72,11 @@ class Piggy(PiggyParent):
         self.fwd(30,30)
         self.servo(1000)
         if self.detect() is False:
-          self.fwd(20,30)
+          self.fwd(20,40)
           time.sleep(2)
-          self.fwd(30,30)
+          self.fwd(35,35)
           time.sleep(2)
-          self.fwd(30,20)
+          self.fwd(40,20)
           time.sleep(2)
         self.servo(1500)
         if self.detect() is False:
@@ -86,11 +86,11 @@ class Piggy(PiggyParent):
           self.turn_by_deg(-86)
         self.servo(2000)
         if self.detect() is False:
-          self.fwd(30,20)
+          self.fwd(40,20)
           time.sleep(2)
-          self.fwd(30,30)
+          self.fwd(35,35)
           time.sleep(2)
-          self.fwd(20,30)
+          self.fwd(20,40)
           time.sleep(2)
         self.servo(1500)
         if self.detect() is False:
