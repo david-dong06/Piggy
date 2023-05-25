@@ -69,14 +69,14 @@ class Piggy(PiggyParent):
     def inter(self):
       self.servo(1500)
       while True:
-        self.fwd(30,30)
+        self.fwd(50,50)
         self.servo(1000)
         if self.detect() is False:
-          self.fwd(20,40)
+          self.fwd(20,50)
           time.sleep(2)
-          self.fwd(35,35)
+          self.fwd(45,45)
           time.sleep(2)
-          self.fwd(40,20)
+          self.fwd(50,20)
           time.sleep(2)
         self.servo(1500)
         if self.detect() is False:
@@ -86,11 +86,11 @@ class Piggy(PiggyParent):
           self.turn_by_deg(-86)
         self.servo(2000)
         if self.detect() is False:
-          self.fwd(40,20)
+          self.fwd(50,20)
           time.sleep(2)
-          self.fwd(35,35)
+          self.fwd(50,50)
           time.sleep(2)
-          self.fwd(20,40)
+          self.fwd(20,50)
           time.sleep(2)
         self.servo(1500)
         if self.detect() is False:
@@ -195,7 +195,7 @@ class Piggy(PiggyParent):
         for x in range(10):
           
           self.turn_by_deg(36)
-          if self.read_distance()<=100:
+          if self.read_distance()<=150:
             return False
         return True
             
