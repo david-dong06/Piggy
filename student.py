@@ -65,6 +65,36 @@ class Piggy(PiggyParent):
     '''
     def vo(self):
       self.servo(1000)
+
+    def inter(self):
+      self.servo(1500)
+      while True:
+        self.fwd(30,30)
+        self.servo(1200)
+        if self.detect() is False:
+          self.fwd(23,30)
+          time.sleep(2)
+          self.fwd(30,30)
+          time.sleep
+          self.fwd(30.23)
+          time.sleep(2)
+        self.servo(1500)
+        if self.detect() is False:
+          self.turn_by_deg(86)
+          self.fwd()
+          time,.sleep(2)
+          self.turn_by_deg(-86)
+        self.servo(1800)
+        if self.detect() is False:
+          self.fwd(30,23)
+          time.sleep(2)
+          self.fwd(30,30)
+          time.sleep
+          self.fwd(23.30)
+          time.sleep(2)
+        self.servo(1500)
+        if self.detect()
+      
     
     def short(self):
       while True:
