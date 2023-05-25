@@ -93,7 +93,11 @@ class Piggy(PiggyParent):
           self.fwd(23.30)
           time.sleep(2)
         self.servo(1500)
-        if self.detect()
+         if self.detect() is False:
+          self.turn_by_deg(86)
+          self.fwd()
+          time.sleep(2)
+          self.turn_by_deg(-86)
       
     
     def short(self):
